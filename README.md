@@ -1,2 +1,2 @@
 # Youtube_Video_Downloader
-This python script use a website called getvideohd.com to get the source code of any youtube video the user want and then download it
+This python script scarp the source code of the video the user want to download from a website called getvideohd.com and then download it.
