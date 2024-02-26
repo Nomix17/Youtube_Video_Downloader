@@ -10,7 +10,7 @@ This Python script allows users to download YouTube videos by scraping their sou
 - User-friendly command-line interface.
 
 ## Prerequisites
-- Before running this script, ensure you have the following installed:
+Before running this script, ensure you have the following installed:
 
 - Python 3.x
 
@@ -21,3 +21,10 @@ This Python script allows users to download YouTube videos by scraping their sou
 - Requests
 
 You also need to have Google Chrome and ChromeDriver installed on your system and ensure that ChromeDriver's path is correctly set.
+## Installation
+- Clone this repository to your local machine using:
+    git clone https://github.com/yourusername/your-repository-name.git
+- Navigate into the project directory:
+    cd your-repository-name
+- Install the required Python packages:
+    pip install -r requirements.txt
