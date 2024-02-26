@@ -33,3 +33,6 @@ You also need to have Google Chrome and ChromeDriver installed on your system an
 - Install the required Python packages:
 
       pip install -r requirements.txt
+
+##Configuration
+On the first run, the script will ask for the path of the download folder where you want to save the videos. This path will be saved and reused in subsequent executions. To change the download folder, manually edit the YVD_download_path.txt file.
