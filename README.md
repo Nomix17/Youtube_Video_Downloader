@@ -24,12 +24,12 @@ You also need to have Google Chrome and ChromeDriver installed on your system an
 ## Installation
 - Clone this repository to your local machine using:
 
-        git clone https://github.com/pa1n-sama/Youtube_Video_Downloader
+      git clone https://github.com/pa1n-sama/Youtube_Video_Downloader
 
 - Navigate into the project directory:
 
-        cd your-repository-name
+      cd your-repository-name
 
 - Install the required Python packages:
 
-        pip install -r requirements.txt
+      pip install -r requirements.txt
