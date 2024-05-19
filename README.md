@@ -16,6 +16,8 @@ Before running this script, ensure you have the following installed:
 
 - yt_dlp
 
+- pytube 
+
 - Requests
 
 ## Installation
