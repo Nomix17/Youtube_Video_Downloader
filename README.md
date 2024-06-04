@@ -1,4 +1,4 @@
-/# Youtube_Video_Downloader
+# Youtube_Video_Downloader
 This Python script allows users to download YouTube videos. It provides an interactive command-line interface for users to input the desired video URL and select the video resolution for download.
 ## Features
 - Download videos directly from YouTube via URL.
