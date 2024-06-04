@@ -10,15 +10,7 @@ This Python script allows users to download YouTube videos. It provides an inter
 - User-friendly command-line interface.
 
 ## Prerequisites
-Before running this script, ensure you have the following installed:
-
-- Python 3.x
-
-- yt_dlp
-
-- pytube 
-
-- Requests
+Before running this script, ensure you have Python 3.x installed:
 
 ## Installation
 - Clone this repository to your local machine using:
