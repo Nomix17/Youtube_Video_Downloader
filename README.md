@@ -1,13 +1,11 @@
 # Youtube_Video_Downloader
-This Python script allows users to download YouTube videos. It provides an interactive command-line interface for users to input the desired video URL and select the video resolution for download.
+This Python script allows users to download YouTube videos. It provides an interactive interface for users to input the desired video URL.
 ## Features
 - Download videos directly from YouTube via URL.
 
-- Choose the resolution of the video to download.
-
 - Automatically saves videos to a specified download folder.
 
-- User-friendly command-line interface.
+- User-friendly interface.
 
 ## Prerequisites
 Before running this script, ensure you have Python 3.x installed:
@@ -24,6 +22,3 @@ Before running this script, ensure you have Python 3.x installed:
 - Install the required Python packages:
 
       pip install -r requirements.txt
-
-## Configuration
-On the first run, the script will ask for the path of the download folder where you want to save the videos. This path will be saved and reused in subsequent executions. To change the download folder, manually edit the YVD_download_path.txt file.
