@@ -140,5 +140,5 @@ class YOUTUBE():
         self.root.mainloop()
 
 # Create the application
-x = YOUTUBE(f'{os.path.expanduser("~")}/FDM/')
+x = YOUTUBE(f'{os.path.expanduser("~")}/Downloads/')
 x.gui()
