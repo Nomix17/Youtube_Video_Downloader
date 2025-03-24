@@ -8,12 +8,13 @@ class YOUTUBE():
     def __init__(self, default_path):
         self.mediatype = "mp4" 
         self.root = tkinter.Tk()
-        self.root.title('YVD')
-        self.root.minsize(900, 350)
+        self.root.minsize(700,405)
+        self.root.title('DownloadTube')
         self.root.configure(bg='#101010')
         self.root.columnconfigure(0, weight=1)
         self.root.columnconfigure(1, weight=1)
         self.root.columnconfigure(2, weight=1)
+
 
         self.default_path = default_path
         
@@ -28,10 +29,10 @@ class YOUTUBE():
             rootm.geometry('450x250')
             rootm.configure(bg='#101010')
             rootm.title(title)
-            tkinter.Label(rootm, text='Download Complete', font=('Helvetica', 20, 'normal'), bg='#101010', fg='#cccccc').grid(row=0, padx=10, pady=20, columnspan=2)
-            tkinter.Label(rootm, text=message, font=('Helvetica', 20, 'normal'), bg='#101010', fg='#cccccc').grid(row=1, padx=10, pady=20, columnspan=2)
-            tkinter.Button(rootm, text='OK', font=('Helvetica', 20, 'normal'), bg='#191b1d', fg='#cccccc', activebackground='#101010', activeforeground='#FFFFFF', command=lambda: rootm.destroy()).grid(row=2, column=0, pady=20)
-            tkinter.Button(rootm, text='Open', font=('Helvetica', 20, 'normal'), bg='#191b1d', fg='#cccccc', activebackground='#101010', activeforeground='#FFFFFF', command=lambda: os.system(f'xdg-open "{self.file_path}"')).grid(row=2, column=1, pady=20)
+            tkinter.Label(rootm, text='Download Complete', font=('Helvetica', 15, 'normal'), bg='#101010', fg='#cccccc').grid(row=0, padx=10, pady=20, columnspan=2)
+            tkinter.Label(rootm, text=message, font=('Helvetica', 15, 'normal'), bg='#101010', fg='#cccccc').grid(row=1, padx=10, pady=20, columnspan=2)
+            tkinter.Button(rootm, text='OK', font=('Helvetica', 15, 'normal'), bg='#1e1e1e', fg='#cccccc', activebackground='#101010', activeforeground='#FFFFFF', command=lambda: rootm.destroy()).grid(row=2, column=0, pady=20)
+            tkinter.Button(rootm, text='Open', font=('Helvetica', 15, 'normal'), bg='#1e1e1e', fg='#cccccc', activebackground='#101010', activeforeground='#FFFFFF', command=lambda: os.system(f'xdg-open "{self.file_path}"')).grid(row=2, column=1, pady=20)
 
     def update_mediatype(self):
         if self.mp4checked.get():
@@ -86,13 +87,13 @@ class YOUTUBE():
             self.message_box('ERROR', f"ERROR: {str(ec)}")
 
     def gui(self):
-        tkinter.Label(text='URL', fg='#cccccc', bg='#101010', font=('Helvetica', 25, 'normal')).grid(row=0, column=1, pady=15)
-        self.URL_entry = tkinter.Entry(self.root, bg='#191b1d', fg='#cccccc', font=('Helvetica', 25, 'normal'), width=35)
-        self.URL_entry.grid(row=1, column=1, pady=15)
+        tkinter.Label(text='URL', fg='#cccccc', bg='#101010', font=('Helvetica', 15, 'normal')).grid(row=0, column=1, pady=25)
+        self.URL_entry = tkinter.Entry(self.root, bg='#1e1e1e',fg='#cccccc',highlightthickness=0, font=('Helvetica', 15, 'normal'), width=35)
+        self.URL_entry.grid(row=1, column=1, pady=15,ipady=5)
         
-        tkinter.Label(text='PATH', fg='#cccccc', bg='#101010', font=('Helvetica', 25, 'normal')).grid(row=2, column=1, pady=25)
-        self.Path = tkinter.Entry(self.root, bg='#191b1d', fg='#cccccc', width=35, font=('Helvetica', 25, 'normal'))
-        self.Path.grid(row=3, column=1, pady=15)
+        tkinter.Label(text='PATH', fg='#cccccc', bg='#101010', font=('Helvetica', 15, 'normal')).grid(row=2, column=1, pady=25)
+        self.Path = tkinter.Entry(self.root, bg='#1e1e1e', fg='#cccccc',highlightthickness=0, width=35, font=('Helvetica', 15, 'normal'))
+        self.Path.grid(row=3, column=1, pady=15,ipady=5)
         
         checkbox_frame = tkinter.Frame(self.root, bg='#101010')
         checkbox_frame.grid(row=4, column=1, pady=10)
@@ -104,10 +105,10 @@ class YOUTUBE():
             command=lambda: [self.mp3checked.set(False), self.update_mediatype()],
             bg='#101010', 
             fg='#cccccc',
-            selectcolor='#191b1d',
-            activebackground='#101010',
+            selectcolor='#1e1e1e',
+            activebackground='#1e1e1e',
             activeforeground='#FFFFFF',
-            font=('Helvetica', 16, 'normal')
+            font=('Helvetica', 10, 'normal')
         )
         mp4_checkbox.grid(row=0, column=0, padx=20)
         
@@ -118,21 +119,22 @@ class YOUTUBE():
             command=lambda: [self.mp4checked.set(False), self.update_mediatype()],
             bg='#101010', 
             fg='#cccccc',
-            selectcolor='#191b1d',
-            activebackground='#101010',
+            selectcolor='#1e1e1e',
+            activebackground='#1e1e1e',
             activeforeground='#FFFFFF',
-            font=('Helvetica', 16, 'normal')
+            font=('Helvetica', 10, 'normal')
         )
         mp3_checkbox.grid(row=0, column=1, padx=20)
         
         tkinter.Button(
             text='Download',
             fg='#cccccc',
-            bg='#191b1d',
+            bg='#1e1e1e',
+            highlightthickness=0,
             command=self.download,
-            font=('Helvetica', 25, 'normal'),
-            padx=20,
-            pady=15,
+            font=('Helvetica', 15, 'normal'),
+            padx=15,
+            pady=10,
             activebackground='#101010',
             activeforeground='#FFFFFF'
         ).grid(row=5, column=1, pady=20)
